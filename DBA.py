@@ -150,8 +150,8 @@ def DBA_update(center, series, cost_mat, path_mat, delta_mat):
 
 def main():
     #generating synthetic data
-    n_series = 20
-    length = 200
+    n_series = 6
+    length = 100
 
     series = list()
     padding_length=30
@@ -168,7 +168,8 @@ def main():
         series_i = series_i[:l]
         #randomize a bit
         series_i = randomizer_fun(series_i)
-
+        #amplify the series a bit
+        series_i=np.random.uniform(.8,1.2)*series_i
         series.append(series_i)
 
     #plotting the synthetic data
