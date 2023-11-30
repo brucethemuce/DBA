@@ -170,20 +170,20 @@ def main():
         series_i = randomizer_fun(series_i)
 
         series.append(series_i)
-    series = np.array(series)
 
     #plotting the synthetic data
     for s in series:
-        plt.plot(range(0,len(s)), s)
-    plt.draw()
+        plt.plot(range(0,len(s)), s,'k')
+    # plt.draw()
+    plt.savefig("allCycles.jpg")
 
     #calculating average series with DBA
     average_series = performDBA(series)
 
     #plotting the average series
-    plt.figure()
-    plt.plot(range(0,len(average_series)), average_series)
-    plt.show()
+    # plt.figure()
+    plt.plot(range(0,len(average_series)), average_series,'r')
+    plt.savefig("aligned.jpg")
 
 if __name__== "__main__":
     main()
