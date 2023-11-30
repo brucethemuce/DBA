@@ -151,7 +151,7 @@ def DBA_update(center, series, cost_mat, path_mat, delta_mat):
 def main():
     #generating synthetic data
     n_series = 6
-    length = 100
+    length = 1000
 
     series = list()
     padding_length=30
